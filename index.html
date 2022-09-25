@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PWA demo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div>
+    <p><img src="icon.png"></p>
+    <p>This is a demo</p>
+  </div>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+      .then(reg_status => {
+        console.log(reg_status);
+      })
+    }
+  </script>
+</body>
+</html>
